@@ -1,0 +1,92 @@
+[
+  {
+    "date": "2026-04-17",
+    "key": "ING-136",
+    "url": "https://telestream.atlassian.net/browse/ING-136",
+    "summary": "S3/FTP credential masking — passwords never returned to frontend",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.0",
+    "notes": "Edit Destination panel shows masked password hint; password field never populated from backend"
+  },
+  {
+    "date": "2026-04-17",
+    "key": "ING-124",
+    "url": "https://telestream.atlassian.net/browse/ING-124",
+    "summary": "SourceCard/MediaList performance — depth=0 optimization",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.0",
+    "notes": "TV (85 files, 26.1 kB) and NAS_Movies (2 files, 5.9 GB) both loaded instantly; depth=0 confirmed working"
+  },
+  {
+    "date": "2026-04-17",
+    "key": "ING-116",
+    "url": "https://telestream.atlassian.net/browse/ING-116",
+    "summary": "RemoveUploads not affecting live query",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.0",
+    "notes": "Delete job → immediate disappearance from Monitor view; live subscription now triggered correctly"
+  },
+  {
+    "date": "2026-04-20",
+    "key": "ING-135",
+    "url": "https://telestream.atlassian.net/browse/ING-135",
+    "summary": "Vantage large workflow list — search + Show Inactive toggle",
+    "action": "tested",
+    "result": "DEFERRED",
+    "build": "1.0.0",
+    "notes": "Requires live Vantage server; cannot test on macOS standalone setup"
+  },
+  {
+    "date": "2026-04-14",
+    "key": "ING-175",
+    "url": "https://telestream.atlassian.net/browse/ING-175",
+    "summary": "Improve loading feedback for \"Diagnose Connection\" button in Destinations",
+    "action": "created",
+    "result": null,
+    "build": "1.0.0",
+    "notes": ""
+  },
+  {
+    "date": "2026-04-17",
+    "key": "ING-181",
+    "url": "https://telestream.atlassian.net/browse/ING-181",
+    "summary": "Keyboard Shortcuts page shows Ctrl instead of Cmd for all shortcuts on macOS",
+    "action": "created",
+    "result": null,
+    "build": "1.0.0",
+    "notes": ""
+  },
+  {
+    "date": "2026-04-17",
+    "key": "ING-182",
+    "url": "https://telestream.atlassian.net/browse/ING-182",
+    "summary": "Raw i18n keys exposed as tooltips on player buttons",
+    "action": "created",
+    "result": null,
+    "build": "1.0.0",
+    "notes": ""
+  },
+  {
+    "date": "2026-04-17",
+    "key": "ING-183",
+    "url": "https://telestream.atlassian.net/browse/ING-183",
+    "summary": "New/Edit Source panel header shows raw i18n key instead of title",
+    "action": "created",
+    "result": null,
+    "build": "1.0.0",
+    "notes": ""
+  },
+  {
+    "date": "2026-04-17",
+    "key": "ING-184",
+    "url": "https://telestream.atlassian.net/browse/ING-184",
+    "summary": "FTP Server field placeholder has a typo — \"somwhere\" instead of \"somewhere\"",
+    "action": "created",
+    "result": null,
+    "build": "1.0.0",
+    "notes": ""
+  }
+]

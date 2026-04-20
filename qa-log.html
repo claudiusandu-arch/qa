@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UP.Ingest QA Log</title>
+<!-- Codex: redesign all styles below. Data comes from fetch('./qa-log.json'). Do not touch the JS logic. -->
+<style>
+  :root {
+    --bg: #F4F6FA;
+    --surface: #FFFFFF;
+    --surface-alt: #F8FAFD;
+    --border: #DDE4EE;
+    --border-strong: #C7D3E3;
+    --text: #16324F;
+    --muted: #5F7087;
+    --blue: #0B66E4;
+    --blue-dark: #0747A6;
+    --pass-bg: #E3FCEF;
+    --pass-fg: #0A6B41;
+    --fail-bg: #FFEBE6;
+    --fail-fg: #C9372C;
+    --deferred-bg: #FFF1D6;
+    --deferred-fg: #9E5A00;
+    --new-bg: #EAE6FF;
+    --new-fg: #5E4DB2;
+    --shadow: 0 16px 36px rgba(14, 30, 62, 0.08);
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background:
+      radial-gradient(circle at top right, rgba(11, 102, 228, 0.12), transparent 24%),
+      linear-gradient(180deg, #F7FAFF 0%, var(--bg) 280px);
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.45;
+    min-height: 100vh;
+  }
+
+  header {
+    max-width: 1280px;
+    margin: 28px auto 0;
+    padding: 28px 28px 22px;
+    color: #FFFFFF;
+    background: linear-gradient(135deg, #0A4FBF 0%, var(--blue) 55%, #3B82F6 100%);
+    border-radius: 20px 20px 0 0;
+    box-shadow: var(--shadow);
+  }
+
+  header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  header p {
+    font-size: 13px;
+    opacity: 0.84;
+    margin-top: 6px;
+  }
+
+  .tabs,
+  .filters,
+  .content {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-left: 28px;
+    padding-right: 28px;
+    background: var(--surface);
+  }
+
+  .tabs {
+    display: flex;
+    gap: 10px;
+    padding-top: 16px;
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .tab {
+    position: relative;
+    padding: 12px 18px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--muted);
+    border-radius: 12px 12px 0 0;
+    border: 1px solid transparent;
+    border-bottom: none;
+    transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
+  }
+
+  .tab:hover {
+    color: var(--blue-dark);
+    background: #F5F8FD;
+  }
+
+  .tab.active {
+    color: var(--blue-dark);
+    background: var(--surface);
+    border-color: var(--border);
+    box-shadow: inset 0 3px 0 var(--blue);
+  }
+
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(180deg, #FCFDFE, #F8FAFD);
+  }
+
+  .search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+    flex: 1 1 320px;
+    justify-content: flex-end;
+  }
+
+  .filters select {
+    min-width: 170px;
+    appearance: none;
+    background: var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%235F7087' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat right 12px center;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 38px 10px 12px;
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 0 1px 0 rgba(9, 30, 66, 0.03);
+  }
+
+  .search-input {
+    min-width: 220px;
+    flex: 1 1 260px;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface);
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 0 1px 0 rgba(9, 30, 66, 0.03);
+  }
+
+  .search-input::placeholder {
+    color: var(--muted);
+    font-weight: 500;
+  }
+
+  .filters select:focus {
+    outline: none;
+    border-color: #80B8FF;
+    box-shadow: 0 0 0 3px rgba(11, 102, 228, 0.16);
+  }
+
+  .search-input:focus {
+    outline: none;
+    border-color: #80B8FF;
+    box-shadow: 0 0 0 3px rgba(11, 102, 228, 0.16);
+  }
+
+  .search-button {
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 10px 16px;
+    background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(11, 102, 228, 0.18);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+  }
+
+  .search-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 22px rgba(11, 102, 228, 0.22);
+    filter: brightness(1.02);
+  }
+
+  .search-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(11, 102, 228, 0.16), 0 8px 18px rgba(11, 102, 228, 0.18);
+  }
+
+  .content {
+    padding-top: 20px;
+    padding-bottom: 28px;
+    border: 1px solid var(--border);
+    border-top: none;
+    border-radius: 0 0 20px 20px;
+    box-shadow: var(--shadow);
+    overflow: visible;
+  }
+
+  table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  th {
+    background: linear-gradient(180deg, #F7F9FC, #F1F5FA);
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-bottom: 1px solid var(--border);
+  }
+
+  td {
+    padding: 14px 16px;
+    border-top: 1px solid #EEF2F7;
+    font-size: 13px;
+    vertical-align: middle;
+    background: var(--surface);
+  }
+
+  /* Column widths — keep date/key/result/build fixed, let summary+notes share remaining space */
+  th:nth-child(1), td:nth-child(1) { width: 90px; white-space: nowrap; }
+  th:nth-child(2), td:nth-child(2) { width: 90px; white-space: nowrap; }
+  th:nth-child(3), td:nth-child(3) { width: 30%; }
+  th:nth-child(4), td:nth-child(4) { width: 100px; white-space: nowrap; }
+  th:nth-child(5), td:nth-child(5) { width: 70px; white-space: nowrap; }
+  th:nth-child(6), td:nth-child(6) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--muted); font-size: 12px; max-width: 0; }
+
+  tbody tr:first-child td {
+    border-top: none;
+  }
+
+  tbody tr:hover td {
+    background: #F8FBFF;
+  }
+
+  td a {
+    color: var(--blue-dark);
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  td a:hover {
+    text-decoration: underline;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 76px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .badge-pass {
+    background: var(--pass-bg);
+    color: var(--pass-fg);
+  }
+
+  .badge-fail {
+    background: var(--fail-bg);
+    color: var(--fail-fg);
+  }
+
+  .badge-deferred {
+    background: var(--deferred-bg);
+    color: var(--deferred-fg);
+  }
+
+  .badge-null {
+    background: var(--new-bg);
+    color: var(--new-fg);
+  }
+
+  .empty {
+    text-align: center;
+    padding: 56px 24px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  @media (max-width: 900px) {
+    header,
+    .tabs,
+    .filters,
+    .content {
+      margin-left: 16px;
+      margin-right: 16px;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    /* Remove overflow:hidden so horizontal scroll works */
+    .content {
+      overflow-x: auto;
+      overflow-y: visible;
+    }
+
+    table {
+      min-width: 760px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    header {
+      margin-top: 16px;
+      padding-top: 22px;
+      padding-bottom: 18px;
+      border-radius: 18px 18px 0 0;
+    }
+
+    header h1 {
+      font-size: 24px;
+    }
+
+    .tabs {
+      gap: 8px;
+      overflow-x: auto;
+    }
+
+    .tab {
+      white-space: nowrap;
+    }
+
+    .filters select,
+    .search-box,
+    .search-input,
+    .search-button {
+      width: 100%;
+      min-width: 0;
+    }
+
+    .search-box {
+      margin-left: 0;
+      justify-content: stretch;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .content {
+      border-radius: 0 0 18px 18px;
+    }
+  }
+
+  /* Card layout for mobile — reflows table rows into stacked cards */
+  @media (max-width: 480px) {
+    .content {
+      overflow: visible;
+      padding: 12px;
+    }
+
+    table, thead, tbody, th, td, tr {
+      display: block;
+      width: 100%;
+    }
+
+    thead { display: none; }
+
+    table {
+      min-width: 0;
+      border: none;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    tbody tr {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      margin-bottom: 12px;
+      padding: 14px 16px;
+      box-shadow: 0 2px 8px rgba(14, 30, 62, 0.06);
+    }
+
+    tbody tr:hover td { background: transparent; }
+
+    td {
+      border: none;
+      padding: 2px 0;
+      background: transparent !important;
+      font-size: 13px;
+    }
+
+    /* DATE — top-right muted label */
+    td:nth-child(1) {
+      font-size: 11px;
+      color: var(--muted);
+      text-align: right;
+      float: right;
+      clear: none;
+      padding-top: 2px;
+    }
+
+    /* KEY — large linked ticket number */
+    td:nth-child(2) {
+      font-size: 17px;
+      font-weight: 800;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    /* SUMMARY — main body text */
+    td:nth-child(3) {
+      font-size: 13px;
+      line-height: 1.45;
+      color: var(--text);
+      margin-bottom: 10px;
+      clear: both;
+    }
+
+    /* RESULT + BUILD — inline badges row */
+    td:nth-child(4) {
+      display: inline-block;
+      width: auto;
+      margin-right: 8px;
+    }
+
+    td:nth-child(5) {
+      display: inline-block;
+      width: auto;
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 600;
+      vertical-align: middle;
+    }
+
+    /* NOTES — small muted footer */
+    td:nth-child(6) {
+      display: block;
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px solid var(--border);
+      line-height: 1.4;
+      white-space: normal;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>UP.Ingest QA Log</h1>
+  <p id="subtitle">Loading…</p>
+</header>
+
+<div class="tabs">
+  <div class="tab active" data-tab="tested">Jiras Tested</div>
+  <div class="tab" data-tab="created">Jiras Created</div>
+</div>
+
+<div class="filters">
+  <select id="filter-date"><option value="">All Dates</option></select>
+  <select id="filter-build"><option value="">All Builds</option></select>
+  <select id="filter-result"><option value="">All Results</option>
+    <option value="PASS">PASS</option>
+    <option value="FAIL">FAIL</option>
+    <option value="DEFERRED">DEFERRED</option>
+  </select>
+  <div class="search-box">
+    <input id="filter-search" class="search-input" type="text" placeholder="Search key, summary, or notes">
+    <button id="search-button" class="search-button" type="button">Search</button>
+  </div>
+</div>
+
+<div class="content">
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Key</th>
+        <th>Summary</th>
+        <th>Result</th>
+        <th>Build</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody id="log-body"></tbody>
+  </table>
+</div>
+
+<script>
+// CODEX: do not modify the JS below — only style the HTML/CSS above
+let allData = [];
+let activeTab = 'tested';
+let searchQuery = '';
+let searchDebounceTimer;
+
+const badgeClass = r => ({
+  PASS: 'badge-pass', FAIL: 'badge-fail', DEFERRED: 'badge-deferred'
+}[r] ?? 'badge-null');
+
+const badgeLabel = r => r ?? 'NEW';
+
+function normalizedSearchText(r) {
+  return [r.key, r.summary, r.notes].filter(Boolean).join(' ').toLowerCase();
+}
+
+function applySearch(query) {
+  searchQuery = query.trim().toLowerCase();
+  render();
+}
+
+function scheduleSearch(query) {
+  clearTimeout(searchDebounceTimer);
+  searchDebounceTimer = setTimeout(() => applySearch(query), 180);
+}
+
+function populateFilter(id, field) {
+  const sel = document.getElementById(id);
+  const vals = [...new Set(allData.map(r => r[field]).filter(Boolean))].sort().reverse();
+  vals.forEach(v => { const o = document.createElement('option'); o.value = o.textContent = v; sel.appendChild(o); });
+}
+
+function render() {
+  const dateF = document.getElementById('filter-date').value;
+  const buildF = document.getElementById('filter-build').value;
+  const resultF = document.getElementById('filter-result').value;
+
+  const rows = allData
+    .filter(r => r.action === activeTab)
+    .filter(r => !dateF || r.date === dateF)
+    .filter(r => !buildF || r.build === buildF)
+    .filter(r => !resultF || r.result === resultF)
+    .filter(r => !searchQuery || normalizedSearchText(r).includes(searchQuery))
+    .sort((a, b) => b.date.localeCompare(a.date));
+
+  const tbody = document.getElementById('log-body');
+  if (!rows.length) {
+    tbody.innerHTML = '<tr><td colspan="6" class="empty">No entries yet.</td></tr>';
+    return;
+  }
+  tbody.innerHTML = rows.map(r => `
+    <tr>
+      <td>${r.date}</td>
+      <td><a href="${r.url}" target="_blank">${r.key}</a></td>
+      <td>${r.summary}</td>
+      <td><span class="badge ${badgeClass(r.result)}">${badgeLabel(r.result)}</span></td>
+      <td>${r.build ?? '—'}</td>
+      <td>${r.notes ?? ''}</td>
+    </tr>`).join('');
+}
+
+document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => {
+  document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
+  t.classList.add('active');
+  activeTab = t.dataset.tab;
+  render();
+}));
+
+['filter-date','filter-build','filter-result'].forEach(id =>
+  document.getElementById(id).addEventListener('change', render));
+
+const searchInput = document.getElementById('filter-search');
+const searchButton = document.getElementById('search-button');
+
+searchInput.addEventListener('input', e => scheduleSearch(e.target.value));
+searchInput.addEventListener('keydown', e => {
+  if (e.key === 'Enter') {
+    clearTimeout(searchDebounceTimer);
+    applySearch(e.target.value);
+  }
+});
+searchButton.addEventListener('click', () => {
+  clearTimeout(searchDebounceTimer);
+  applySearch(searchInput.value);
+});
+
+fetch('./qa-log.json?t=' + Date.now())
+  .then(r => r.json())
+  .then(data => {
+    allData = data;
+    const total = data.length;
+    const today = new Date().toISOString().slice(0,10);
+    const todayCount = data.filter(r => r.date === today).length;
+    document.getElementById('subtitle').textContent =
+      `${total} total entries · ${todayCount} today (${today})`;
+    populateFilter('filter-date', 'date');
+    populateFilter('filter-build', 'build');
+    render();
+  })
+  .catch(() => {
+    document.getElementById('log-body').innerHTML =
+      '<tr><td colspan="6" class="empty">Could not load qa-log.json</td></tr>';
+  });
+</script>
+</body>
+</html>

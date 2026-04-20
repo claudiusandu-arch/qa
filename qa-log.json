@@ -3,7 +3,7 @@
     "date": "2026-04-17",
     "key": "ING-136",
     "url": "https://telestream.atlassian.net/browse/ING-136",
-    "summary": "S3/FTP credential masking — passwords never returned to frontend",
+    "summary": "S3/FTP credential masking \u2014 passwords never returned to frontend",
     "action": "tested",
     "result": "PASS",
     "build": "1.0.0",
@@ -13,7 +13,7 @@
     "date": "2026-04-17",
     "key": "ING-124",
     "url": "https://telestream.atlassian.net/browse/ING-124",
-    "summary": "SourceCard/MediaList performance — depth=0 optimization",
+    "summary": "SourceCard/MediaList performance \u2014 depth=0 optimization",
     "action": "tested",
     "result": "PASS",
     "build": "1.0.0",
@@ -27,13 +27,13 @@
     "action": "tested",
     "result": "PASS",
     "build": "1.0.0",
-    "notes": "Delete job → immediate disappearance from Monitor view; live subscription now triggered correctly"
+    "notes": "Delete job \u2192 immediate disappearance from Monitor view; live subscription now triggered correctly"
   },
   {
     "date": "2026-04-20",
     "key": "ING-135",
     "url": "https://telestream.atlassian.net/browse/ING-135",
-    "summary": "Vantage large workflow list — search + Show Inactive toggle",
+    "summary": "Vantage large workflow list \u2014 search + Show Inactive toggle",
     "action": "tested",
     "result": "DEFERRED",
     "build": "1.0.0",
@@ -83,10 +83,50 @@
     "date": "2026-04-17",
     "key": "ING-184",
     "url": "https://telestream.atlassian.net/browse/ING-184",
-    "summary": "FTP Server field placeholder has a typo — \"somwhere\" instead of \"somewhere\"",
+    "summary": "FTP Server field placeholder has a typo \u2014 \"somwhere\" instead of \"somewhere\"",
     "action": "created",
     "result": null,
     "build": "1.0.0",
+    "notes": ""
+  },
+  {
+    "date": "2026-04-20",
+    "key": "ING-190",
+    "url": "https://telestream.atlassian.net/browse/ING-190",
+    "summary": "Monitor: expanded sub-rows ignore search filter",
+    "action": "created",
+    "result": null,
+    "build": "1.0.0-b2",
+    "notes": "Filed without screenshot (removed by user during review)"
+  },
+  {
+    "date": "2026-04-20",
+    "key": "ING-191",
+    "url": "https://telestream.atlassian.net/browse/ING-191",
+    "summary": "Job dialog Media step: empty search state uses \"sources\" instead of \"media\"",
+    "action": "created",
+    "result": null,
+    "build": "1.0.0-b2",
+    "notes": ""
+  },
+  {
+    "date": "2026-04-20",
+    "key": "ING-192",
+    "url": "https://telestream.atlassian.net/browse/ING-192",
+    "summary": "Home: stale timecode persists when switching to non-media file",
+    "action": "created",
+    "result": null,
+    "build": "1.0.0-b2",
+    "notes": ""
+  },
+  {
+    "date": "2026-04-20",
+    "key": "ING-193",
+    "url": "https://telestream.atlassian.net/browse/ING-193",
+    "summary": "Home: mediaControllerPlayerLoadFailure fires silently with no UI feedback",
+    "action": "created",
+    "result": null,
+    "build": "1.0.0-b2",
     "notes": ""
   }
 ]

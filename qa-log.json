@@ -120,6 +120,17 @@
     "notes": ""
   },
   {
+    "date": "2026-04-21",
+    "key": "ING-180",
+    "url": "https://telestream.atlassian.net/browse/ING-180",
+    "summary": "App falls back to ephemeral port when default ports are occupied",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.0-b2",
+    "comment_posted": false,
+    "notes": "Occupied ports 4444 and 4445 before launch; app started on port 50480. Full UI loaded — Sources, Destinations, navigation functional. No error observed. macOS 26.4.1 (25E253)."
+  },
+  {
     "date": "2026-04-20",
     "key": "ING-193",
     "url": "https://telestream.atlassian.net/browse/ING-193",
@@ -128,5 +139,17 @@
     "result": null,
     "build": "1.0.0-b2",
     "notes": ""
+  }
+,
+  {
+    "date": "2026-04-21",
+    "key": "ING-194",
+    "url": "https://telestream.atlassian.net/browse/ING-194",
+    "summary": "[Frontend] Integrate PrimeReact style modal dialog stacking",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.0.b3",
+    "comment_posted": true,
+    "notes": "Settings sidebar + Cmd-K/Ctrl+K stacking verified on macOS and Windows 11. Esc back/close order correct on both platforms."
   }
 ]

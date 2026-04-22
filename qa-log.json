@@ -151,5 +151,16 @@
     "build": "1.0.0.b3",
     "comment_posted": true,
     "notes": "Settings sidebar + Cmd-K/Ctrl+K stacking verified on macOS and Windows 11. Esc back/close order correct on both platforms."
+  },
+  {
+    "date": "2026-04-22",
+    "key": "ING-185",
+    "url": "https://telestream.atlassian.net/browse/ING-185",
+    "summary": "[Frontend] Add help system and articles for main page",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.0.b3",
+    "comment_posted": true,
+    "notes": "Palette opens via Cmd+K/Ctrl+K and Help menu. 7 categories, keyboard nav, search all work on macOS and Windows 11. Content note: Getting started article lacks a screenshot."
   }
 ]

@@ -128,7 +128,7 @@
     "result": "PASS",
     "build": "1.0.0-b2",
     "comment_posted": false,
-    "notes": "Occupied ports 4444 and 4445 before launch; app started on port 50480. Full UI loaded — Sources, Destinations, navigation functional. No error observed. macOS 26.4.1 (25E253)."
+    "notes": "Occupied ports 4444 and 4445 before launch; app started on port 50480. Full UI loaded \u2014 Sources, Destinations, navigation functional. No error observed. macOS 26.4.1 (25E253)."
   },
   {
     "date": "2026-04-20",
@@ -139,8 +139,7 @@
     "result": null,
     "build": "1.0.0-b2",
     "notes": ""
-  }
-,
+  },
   {
     "date": "2026-04-21",
     "key": "ING-194",
@@ -162,5 +161,27 @@
     "build": "1.0.0.b3",
     "comment_posted": true,
     "notes": "Palette opens via Cmd+K/Ctrl+K and Help menu. 7 categories, keyboard nav, search all work on macOS and Windows 11. Content note: Getting started article lacks a screenshot."
+  },
+  {
+    "date": "2026-04-23",
+    "key": "ING-191",
+    "url": "https://telestream.atlassian.net/browse/ING-191",
+    "summary": "Job dialog Media step: empty search state uses \"sources\" instead of \"media\"",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.461.b4",
+    "notes": "Empty search state now uses media wording instead of sources",
+    "comment_posted": true
+  },
+  {
+    "date": "2026-04-23",
+    "key": "ING-157",
+    "url": "https://telestream.atlassian.net/browse/ING-157",
+    "summary": "Missing required fields in Amazon S3 destination",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.461.b4",
+    "notes": "S3 destination now enforces Access Key, Secret Access Key, Region, and Bucket as required; save disabled and test connection fails when Bucket is empty",
+    "comment_posted": true
   }
 ]

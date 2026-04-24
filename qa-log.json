@@ -183,5 +183,16 @@
     "build": "1.0.461.b4",
     "notes": "S3 destination now enforces Access Key, Secret Access Key, Region, and Bucket as required; save disabled and test connection fails when Bucket is empty",
     "comment_posted": true
+  },
+  {
+    "date": "2026-04-24",
+    "key": "ING-182",
+    "url": "https://telestream.atlassian.net/browse/ING-182",
+    "summary": "Raw i18n keys exposed as tooltips on player buttons",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.475.b5",
+    "comment_posted": true,
+    "notes": "All right-side panel buttons (Destinations, Audio Meters, Media Inspector, Card Metadata) and transport controls show proper human-readable tooltips. No raw i18n keys observed."
   }
 ]

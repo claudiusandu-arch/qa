@@ -194,5 +194,16 @@
     "build": "1.0.475.b5",
     "comment_posted": true,
     "notes": "All right-side panel buttons (Destinations, Audio Meters, Media Inspector, Card Metadata) and transport controls show proper human-readable tooltips. No raw i18n keys observed."
+  },
+  {
+    "date": "2026-04-24",
+    "key": "ING-183",
+    "url": "https://telestream.atlassian.net/browse/ING-183",
+    "summary": "New/Edit Source panel header shows raw i18n key instead of title",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.475.b5",
+    "comment_posted": true,
+    "notes": "Settings → Sources → New Source panel header renders \"Edit Source\" (translated). Row \"…\" menu shows \"Edit Source\"/\"Delete Source\". No raw settings.sources.edit-source key observed."
   }
 ]

@@ -205,5 +205,16 @@
     "build": "1.0.475.b5",
     "comment_posted": true,
     "notes": "Settings → Sources → New Source panel header renders \"Edit Source\" (translated). Row \"…\" menu shows \"Edit Source\"/\"Delete Source\". No raw settings.sources.edit-source key observed."
+  },
+  {
+    "date": "2026-04-24",
+    "key": "ING-184",
+    "url": "https://telestream.atlassian.net/browse/ING-184",
+    "summary": "FTP Server field placeholder has a typo — \"somwhere\" instead of \"somewhere\"",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.475.b5",
+    "comment_posted": true,
+    "notes": "FTP placeholder verified via DOM = \"ftp.somewhere.com\". Cross-checked all 22 string changes in commit f1003049 against installed bundle — all old forms absent, all new forms present."
   }
 ]

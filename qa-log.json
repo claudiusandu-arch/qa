@@ -216,5 +216,16 @@
     "build": "1.0.475.b5",
     "comment_posted": true,
     "notes": "FTP placeholder verified via DOM = \"ftp.somewhere.com\". Cross-checked all 22 string changes in commit f1003049 against installed bundle — all old forms absent, all new forms present."
+  },
+  {
+    "date": "2026-04-24",
+    "key": "ING-190",
+    "url": "https://telestream.atlassian.net/browse/ING-190",
+    "summary": "Monitor: expanded sub-rows ignore search filter",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.475.b5",
+    "comment_posted": true,
+    "notes": "Monitor view with expanded File Copy sub-row (Botez Amelia 14.05.2022.mp4); typed non-matching search string — all parent rows and the expanded sub-row correctly hidden, empty state shown."
   }
 ]

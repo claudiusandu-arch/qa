@@ -230,6 +230,17 @@
   },
   {
     "date": "2026-04-26",
+    "key": "ING-199",
+    "url": "https://telestream.atlassian.net/browse/ING-199",
+    "summary": "[Frontend] Stabilize upgradeCode - this is what windows uses to match apps during install-over steps.",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.475-b5",
+    "platform": "Windows",
+    "notes": "Installed b5 (1.0.475) over b4 (1.0.461) — no duplicate Add/Remove entries, no Warning 1946"
+  },
+  {
+    "date": "2026-04-26",
     "key": "ING-192",
     "url": "https://telestream.atlassian.net/browse/ING-192",
     "summary": "Home: stale timecode persists when switching to non-media file",

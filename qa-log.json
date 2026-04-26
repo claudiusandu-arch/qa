@@ -230,6 +230,17 @@
   },
   {
     "date": "2026-04-26",
+    "key": "ING-193",
+    "url": "https://telestream.atlassian.net/browse/ING-193",
+    "summary": "Home: mediaControllerPlayerLoadFailure fires silently with no UI feedback",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.475.b5",
+    "comment_posted": true,
+    "notes": "Toast confirmed via MutationObserver: 'Media cannot be played — may be unsupported media type'. p-toast-bottom-center element present in DOM on non-media file selection."
+  },
+  {
+    "date": "2026-04-26",
     "key": "ING-199",
     "url": "https://telestream.atlassian.net/browse/ING-199",
     "summary": "[Frontend] Stabilize upgradeCode - this is what windows uses to match apps during install-over steps.",

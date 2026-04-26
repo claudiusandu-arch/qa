@@ -227,5 +227,16 @@
     "build": "1.0.475.b5",
     "comment_posted": true,
     "notes": "Monitor view with expanded File Copy sub-row (Botez Amelia 14.05.2022.mp4); typed non-matching search string — all parent rows and the expanded sub-row correctly hidden, empty state shown."
+  },
+  {
+    "date": "2026-04-26",
+    "key": "ING-192",
+    "url": "https://telestream.atlassian.net/browse/ING-192",
+    "summary": "Home: stale timecode persists when switching to non-media file",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.475.b5",
+    "comment_posted": true,
+    "notes": "Selected MyStream_0.mov (timecode 00:00:00:00 @30), switched to TV source, selected ca.strings — timecode cleared to empty. Fix confirmed."
   }
 ]

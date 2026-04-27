@@ -289,10 +289,10 @@
     "url": "https://telestream.atlassian.net/browse/ING-203",
     "summary": "[Frontend] Cannot login on VPN",
     "action": "tested",
-    "result": "DEFERRED",
+    "result": "PASS",
     "build": "1.0.475.b5",
-    "comment_posted": false,
-    "notes": "Requires VPN access not available on this machine."
+    "comment_posted": true,
+    "notes": "Tested with Cloudflare VPN active. Login completed successfully — no connection failure or auth block observed."
   },
   {
     "date": "2026-04-27",

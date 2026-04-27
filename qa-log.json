@@ -260,5 +260,49 @@
     "build": "1.0.475.b5",
     "comment_posted": true,
     "notes": "Selected MyStream_0.mov (timecode 00:00:00:00 @30), switched to TV source, selected ca.strings — timecode cleared to empty. Fix confirmed."
+  },
+  {
+    "date": "2026-04-27",
+    "key": "ING-195",
+    "url": "https://telestream.atlassian.net/browse/ING-195",
+    "summary": "[Frontend] Help : use context to open focused help",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.475.b5",
+    "comment_posted": true,
+    "notes": "Settings → Destinations: Cmd+K scoped to 8 destination articles. Editing FTP destination: Cmd+K opens directly to Edit: FTP article. Context routing confirmed at section and destination-type level."
+  },
+  {
+    "date": "2026-04-27",
+    "key": "ING-196",
+    "url": "https://telestream.atlassian.net/browse/ING-196",
+    "summary": "[Frontend] Use markdown for help articles",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.475.b5",
+    "comment_posted": true,
+    "notes": "Scanned all 43 articles across 10 categories for raw markdown syntax (**,##,__,](,backtick). All clean — no raw syntax found in any article."
+  },
+  {
+    "date": "2026-04-27",
+    "key": "ING-203",
+    "url": "https://telestream.atlassian.net/browse/ING-203",
+    "summary": "[Frontend] Cannot login on VPN",
+    "action": "tested",
+    "result": "DEFERRED",
+    "build": "1.0.475.b5",
+    "comment_posted": false,
+    "notes": "Requires VPN access not available on this machine."
+  },
+  {
+    "date": "2026-04-27",
+    "key": "ING-204",
+    "url": "https://telestream.atlassian.net/browse/ING-204",
+    "summary": "Main process crash when closing window shortly after move/resize",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.475.b5",
+    "comment_posted": true,
+    "notes": "3 rapid move/resize → quit cycles. No TypeError: Object has been destroyed dialog in any cycle. App quit cleanly each time."
   }
 ]

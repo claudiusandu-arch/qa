@@ -304,5 +304,16 @@
     "build": "1.0.475.b5",
     "comment_posted": true,
     "notes": "3 rapid move/resize → quit cycles. No TypeError: Object has been destroyed dialog in any cycle. App quit cleanly each time."
+  },
+  {
+    "date": "2026-04-30",
+    "key": "ING-229",
+    "url": "https://telestream.atlassian.net/browse/ING-229",
+    "summary": "[Frontend] copyright -> 2026",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.494.b6",
+    "comment_posted": true,
+    "notes": "About dialog shows © 2026 Telestream 2 LLC. Confirmed via Accessibility API and app.setAboutPanelOptions in app.asar bundle."
   }
 ]

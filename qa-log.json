@@ -315,5 +315,16 @@
     "build": "1.0.494.b6",
     "comment_posted": true,
     "notes": "About dialog shows © 2026 Telestream 2 LLC. Confirmed via Accessibility API and app.setAboutPanelOptions in app.asar bundle."
+  },
+  {
+    "date": "2026-05-04",
+    "key": "ING-236",
+    "url": "https://telestream.atlassian.net/browse/ING-236",
+    "summary": "[Frontend] Can delete parent destination - add confirmation to delete children at same time.",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.510.b7",
+    "comment_posted": true,
+    "notes": "Parent Vantage Cloud destination delete flow showed Delete 2 Destinations and listed the child configuration before removing both records."
   }
 ]

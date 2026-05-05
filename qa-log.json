@@ -326,5 +326,93 @@
     "build": "1.0.510.b7",
     "comment_posted": true,
     "notes": "Parent Vantage Cloud destination delete flow showed Delete 2 Destinations and listed the child configuration before removing both records."
+  },
+  {
+    "date": "2026-05-05",
+    "key": "ING-230",
+    "url": "https://telestream.atlassian.net/browse/ING-230",
+    "summary": "Source name can be saved empty and required field asterisks are missing",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.510.b7",
+    "comment_posted": true,
+    "notes": "Name and Path were marked required, and Save stayed blocked when Name was empty."
+  },
+  {
+    "date": "2026-05-05",
+    "key": "ING-228",
+    "url": "https://telestream.atlassian.net/browse/ING-228",
+    "summary": "Search does not work for sources or destinations in Settings tab",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.510.b7",
+    "comment_posted": true,
+    "notes": "Search worked for both Sources and Destinations in Settings."
+  },
+  {
+    "date": "2026-05-05",
+    "key": "ING-227",
+    "url": "https://telestream.atlassian.net/browse/ING-227",
+    "summary": "No uniqueness validation for destination names",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.510.b7",
+    "comment_posted": true,
+    "notes": "Duplicate destination names were blocked and Save remained disabled."
+  },
+  {
+    "date": "2026-05-05",
+    "key": "ING-225",
+    "url": "https://telestream.atlassian.net/browse/ING-225",
+    "summary": "Keyboard shortcuts allow clip creation on unsupported media despite \"cannot be played\" toast",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.510.b7",
+    "comment_posted": true,
+    "notes": "Unsupported media showed the expected error, and clip shortcuts did not create a clip."
+  },
+  {
+    "date": "2026-05-05",
+    "key": "ING-214",
+    "url": "https://telestream.atlassian.net/browse/ING-214",
+    "summary": "Filter dropdown closes after each selection instead of staying open",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.510.b7",
+    "comment_posted": true,
+    "notes": "The filter dropdown stayed open while selecting filters."
+  },
+  {
+    "date": "2026-05-05",
+    "key": "ING-213",
+    "url": "https://telestream.atlassian.net/browse/ING-213",
+    "summary": "Add confirmation modal before resubmitting jobs",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.510.b7",
+    "comment_posted": true,
+    "notes": "Resubmitting a completed job showed a confirmation dialog before proceeding."
+  },
+  {
+    "date": "2026-05-05",
+    "key": "ING-210",
+    "url": "https://telestream.atlassian.net/browse/ING-210",
+    "summary": "Resume button incorrectly enabled for actions in Completed or Interrupted status",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.510.b7",
+    "comment_posted": true,
+    "notes": "Resume was disabled for a completed job."
+  },
+  {
+    "date": "2026-05-05",
+    "key": "ING-102",
+    "url": "https://telestream.atlassian.net/browse/ING-102",
+    "summary": "Automatically name Job with User Name - remember choices per destination",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.510.b7",
+    "comment_posted": true,
+    "notes": "Job Name Prefix was remembered for the destination during retest."
   }
 ]

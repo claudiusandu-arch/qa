@@ -414,5 +414,16 @@
     "build": "1.0.510.b7",
     "comment_posted": true,
     "notes": "Job Name Prefix was remembered for the destination during retest."
+  },
+  {
+    "date": "2026-05-05",
+    "key": "ING-235",
+    "url": "https://telestream.atlassian.net/browse/ING-235",
+    "summary": "Add help article on preconfigured destinations",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.510.b7",
+    "comment_posted": true,
+    "notes": "Preconfigured destination guidance was present in the help UI."
   }
 ]

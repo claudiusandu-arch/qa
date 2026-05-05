@@ -425,5 +425,16 @@
     "build": "1.0.510.b7",
     "comment_posted": true,
     "notes": "Preconfigured destination guidance was present in the help UI."
+  },
+  {
+    "date": "2026-05-05",
+    "key": "ING-175",
+    "url": "https://telestream.atlassian.net/browse/ING-175",
+    "summary": "Improve loading feedback for “Diagnose Connection” button in Destinations",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.510.b7",
+    "comment_posted": true,
+    "notes": "Manual verification confirmed connection verification now shows loading feedback before completion."
   }
 ]

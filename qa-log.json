@@ -436,5 +436,16 @@
     "build": "1.0.510.b7",
     "comment_posted": true,
     "notes": "Manual verification confirmed connection verification now shows loading feedback before completion."
+  },
+  {
+    "date": "2026-05-11",
+    "key": "ING-243",
+    "url": "https://telestream.atlassian.net/browse/ING-243",
+    "summary": "[Frontend] Add Tutorial and \"Tip\" hints",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.525.b9",
+    "comment_posted": true,
+    "notes": "With all sources and destinations disabled, Home showed the welcome/help copy and Tutorial button; opening Tutorial launched the Help dialog with the expected guided topics."
   }
 ]

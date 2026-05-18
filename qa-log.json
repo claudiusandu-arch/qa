@@ -458,5 +458,16 @@
     "build": "1.0.537.b11",
     "comment_posted": true,
     "notes": "Verified Destinations help palette breadcrumbs, article navigation, Esc back behavior, and Cmd+K/Esc close behavior while editing a destination."
+  },
+  {
+    "date": "2026-05-18",
+    "key": "ING-188",
+    "url": "https://telestream.atlassian.net/browse/ING-188",
+    "summary": "[Frontend] implement Resubmit / Resume on monitor page with new API from backend",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.537.b11",
+    "comment_posted": true,
+    "notes": "Verified Monitor Resubmit creates a fresh job row, and Pause/Resume correctly toggles an active File Copy job between Uploading and Paused."
   }
 ]

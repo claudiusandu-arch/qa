@@ -3,7 +3,7 @@
     "date": "2026-04-17",
     "key": "ING-136",
     "url": "https://telestream.atlassian.net/browse/ING-136",
-    "summary": "S3/FTP credential masking \u2014 passwords never returned to frontend",
+    "summary": "S3/FTP credential masking — passwords never returned to frontend",
     "action": "tested",
     "result": "PASS",
     "build": "1.0.0",
@@ -13,7 +13,7 @@
     "date": "2026-04-17",
     "key": "ING-124",
     "url": "https://telestream.atlassian.net/browse/ING-124",
-    "summary": "SourceCard/MediaList performance \u2014 depth=0 optimization",
+    "summary": "SourceCard/MediaList performance — depth=0 optimization",
     "action": "tested",
     "result": "PASS",
     "build": "1.0.0",
@@ -27,13 +27,13 @@
     "action": "tested",
     "result": "PASS",
     "build": "1.0.0",
-    "notes": "Delete job \u2192 immediate disappearance from Monitor view; live subscription now triggered correctly"
+    "notes": "Delete job → immediate disappearance from Monitor view; live subscription now triggered correctly"
   },
   {
     "date": "2026-04-20",
     "key": "ING-135",
     "url": "https://telestream.atlassian.net/browse/ING-135",
-    "summary": "Vantage large workflow list \u2014 search + Show Inactive toggle",
+    "summary": "Vantage large workflow list — search + Show Inactive toggle",
     "action": "tested",
     "result": "DEFERRED",
     "build": "1.0.0",
@@ -83,7 +83,7 @@
     "date": "2026-04-17",
     "key": "ING-184",
     "url": "https://telestream.atlassian.net/browse/ING-184",
-    "summary": "FTP Server field placeholder has a typo \u2014 \"somwhere\" instead of \"somewhere\"",
+    "summary": "FTP Server field placeholder has a typo — \"somwhere\" instead of \"somewhere\"",
     "action": "created",
     "result": null,
     "build": "1.0.0",
@@ -128,7 +128,7 @@
     "result": "PASS",
     "build": "1.0.0-b2",
     "comment_posted": false,
-    "notes": "Occupied ports 4444 and 4445 before launch; app started on port 50480. Full UI loaded \u2014 Sources, Destinations, navigation functional. No error observed. macOS 26.4.1 (25E253)."
+    "notes": "Occupied ports 4444 and 4445 before launch; app started on port 50480. Full UI loaded — Sources, Destinations, navigation functional. No error observed. macOS 26.4.1 (25E253)."
   },
   {
     "date": "2026-04-20",
@@ -447,5 +447,16 @@
     "build": "1.0.525.b9",
     "comment_posted": true,
     "notes": "With all sources and destinations disabled, Home showed the welcome/help copy and Tutorial button; opening Tutorial launched the Help dialog with the expected guided topics."
+  },
+  {
+    "date": "2026-05-18",
+    "key": "ING-254",
+    "url": "https://telestream.atlassian.net/browse/ING-254",
+    "summary": "[Frontend] Update help palette given user feedback",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.537.b11",
+    "comment_posted": true,
+    "notes": "Verified Destinations help palette breadcrumbs, article navigation, Esc back behavior, and Cmd+K/Esc close behavior while editing a destination."
   }
 ]

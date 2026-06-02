@@ -469,5 +469,27 @@
     "build": "1.0.537.b11",
     "comment_posted": true,
     "notes": "Verified Monitor Resubmit creates a fresh job row, and Pause/Resume correctly toggles an active File Copy job between Uploading and Paused."
+  },
+  {
+    "date": "2026-06-02",
+    "key": "ING-268",
+    "url": "https://telestream.atlassian.net/browse/ING-268",
+    "summary": "[Frontend] media header upload dimmed when selecting clips from card",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.0-b13",
+    "comment_posted": false,
+    "notes": "Source card expanded (TestLocalDestination), clip visible in list. Header upload button confirmed enabled via DOM: disabled=false, opacity=1, pointer-events=auto. Upload button class shows opacity-1000 (active). No dimming observed."
+  },
+  {
+    "date": "2026-06-02",
+    "key": "ING-187",
+    "url": "https://telestream.atlassian.net/browse/ING-187",
+    "summary": "[Frontend] Submit a clip list to a non-vantage destination by copying CML as well to destination.",
+    "action": "tested",
+    "result": "DEFERRED",
+    "build": "1.0.0-b13",
+    "comment_posted": false,
+    "notes": "CML sidecar feature requires clips with distinct in/out segments. UI shortcut testing (I/O/P) produced only zero-duration clips (in=out). Backend CreateCmlSidecarUploadJob was not triggered — only media file copied, no .cml companion appeared. Test-setup limitation; deferred until clip mark creation can be verified with real in/out points."
   }
 ]

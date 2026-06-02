@@ -491,5 +491,16 @@
     "build": "1.0.0-b13",
     "comment_posted": false,
     "notes": "CML sidecar feature requires clips with distinct in/out segments. UI shortcut testing (I/O/P) produced only zero-duration clips (in=out). Backend CreateCmlSidecarUploadJob was not triggered — only media file copied, no .cml companion appeared. Test-setup limitation; deferred until clip mark creation can be verified with real in/out points."
+  },
+  {
+    "date": "2026-06-02",
+    "key": "ING-265",
+    "url": "https://telestream.atlassian.net/browse/ING-265",
+    "summary": "[Frontend] Tech Debt : much stricter linting rules",
+    "action": "tested",
+    "result": "DEFERRED",
+    "build": "1.0.0-b13",
+    "comment_posted": false,
+    "notes": "Pure dev-tooling change (eslint v9 + stricter react rules). No user-visible behaviour to verify. No acceptance criteria to pass/fail against. Deferred — not testable from QA."
   }
 ]

@@ -502,5 +502,60 @@
     "build": "1.0.0-b13",
     "comment_posted": true,
     "notes": "Smoke-tested all 4 areas from commit 783cf6c: auth guard (existing session restored, no remount), video playback (loads and plays), panel splitter (layout stable), help palette keyboard nav (↑↓ highlight, Enter/Esc/breadcrumb all correct)."
+  },
+  {
+    "date": "2026-06-03",
+    "key": "ING-271",
+    "url": "https://telestream.atlassian.net/browse/ING-271",
+    "summary": "[Frontend] better drawing of children in destination to clarify ownership (visual rails)",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.0-b14",
+    "comment_posted": false,
+    "notes": "Visual rails confirmed in Settings > Destinations. Child destinations (test2, Testing) rendered with vertical connecting line and L-bracket indentation beneath parent (QA_ING236_PARENT_20260504183757). Hierarchy clearly communicated."
+  },
+  {
+    "date": "2026-06-03",
+    "key": "ING-267",
+    "url": "https://telestream.atlassian.net/browse/ING-267",
+    "summary": "[Frontend] Make Preserve Structure work for non-directory uploads (selected clips/files)",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.0-b14",
+    "comment_posted": false,
+    "notes": "With single file selected from Season 6 (regular folder source), Copy Mode dropdown shows Preserve Structure available and not dimmed. Both Preserve Structure (Folder hierarchy will be preserved) and Flatten Structure (All files uploaded to root of destination) are selectable. Submit/Next button active (blue). Confirms the no-structure passthrough case: PS stays available rather than being dimmed for non-directory uploads."
+  },
+  {
+    "date": "2026-06-03",
+    "key": "ING-268",
+    "url": "https://telestream.atlassian.net/browse/ING-268",
+    "summary": "[Frontend] media header upload dimmed when selecting clips from card",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.0-b14",
+    "comment_posted": false,
+    "notes": "Media header upload button DOM: class=opacity-1000 p-button p-component p-button-icon-only p-disabled p-button-rounded, opacity=1 (full, NOT visually dimmed). opacity-1000 class confirms fix is present — button is at full opacity consistent with b13 result. No card volumes available in test environment; tested against regular folder source (Season 6)."
+  },
+  {
+    "date": "2026-06-03",
+    "key": "ING-269",
+    "url": "https://telestream.atlassian.net/browse/ING-269",
+    "summary": "[Frontend] cannot submit a card clip with preserve structure on (even though there is a structure).",
+    "action": "tested",
+    "result": "DEFERRED",
+    "build": "1.0.0-b14",
+    "comment_posted": false,
+    "notes": "No card-format (P2/XDCAM/similar) source available in test environment. directorySourceCards backend query requires a card-structured volume. Cannot trigger the card clip + Preserve Structure submit flow. Related: ING-267 loose-file case (PS available for non-directory uploads) verified as PASS."
+  },
+  {
+    "date": "2026-06-03",
+    "key": "ING-258",
+    "url": "https://telestream.atlassian.net/browse/ING-258",
+    "summary": "Vantage UNC path mapping is not validated for macOS /Volumes paths",
+    "action": "tested",
+    "result": "DEFERRED",
+    "build": "1.0.0-b14",
+    "comment_posted": false,
+    "notes": "Ticket status is To Do — fix not yet implemented. All existing Vantage destinations are Vantage Cloud type (api.cloud.telestream.net); no UNC path validation field found in submit dialog (Advanced mode) or destination configure flow. Needs local Vantage server destination or path-override configuration to exercise the /Volumes path input."
   }
 ]

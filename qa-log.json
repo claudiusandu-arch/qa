@@ -534,7 +534,7 @@
     "result": "PASS",
     "build": "1.0.0-b14",
     "comment_posted": false,
-    "notes": "Media header upload button DOM: class=opacity-1000 p-button p-component p-button-icon-only p-disabled p-button-rounded, opacity=1 (full, NOT visually dimmed). opacity-1000 class confirms fix is present — button is at full opacity consistent with b13 result. No card volumes available in test environment; tested against regular folder source (Season 6)."
+    "notes": "Tested with real P2 card source (/Volumes/P2_Card, CONTENTS/CLIP structure, recognised as P2_CARD section in Sources panel). Selected A001C001.MXF. DOM: media header upload button class=opacity-1000 p-button p-component p-button-icon-only p-disabled p-button-rounded, opacity=1 — visually at FULL OPACITY (not dimmed). opacity-1000 class confirms fix is in place."
   },
   {
     "date": "2026-06-03",
@@ -542,10 +542,10 @@
     "url": "https://telestream.atlassian.net/browse/ING-269",
     "summary": "[Frontend] cannot submit a card clip with preserve structure on (even though there is a structure).",
     "action": "tested",
-    "result": "DEFERRED",
+    "result": "PASS",
     "build": "1.0.0-b14",
     "comment_posted": false,
-    "notes": "No card-format (P2/XDCAM/similar) source available in test environment. directorySourceCards backend query requires a card-structured volume. Cannot trigger the card clip + Preserve Structure submit flow. Related: ING-267 loose-file case (PS available for non-directory uploads) verified as PASS."
+    "notes": "Tested with real P2 card source (/Volumes/P2_Card mounted dmg with CONTENTS/CLIP/A001C001.MXF). App detected card as P2_CARD. Selected A001C001.MXF, clicked submit → TestLocalDestination. Submit dialog: Copy Mode=Preserve Structure, Next button ACTIVE (blue). Media step: A001C001.MXF listed, Submit button ACTIVE. Card clip can be submitted with Preserve Structure on."
   },
   {
     "date": "2026-06-03",

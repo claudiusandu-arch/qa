@@ -553,9 +553,9 @@
     "url": "https://telestream.atlassian.net/browse/ING-258",
     "summary": "Vantage UNC path mapping is not validated for macOS /Volumes paths",
     "action": "tested",
-    "result": "DEFERRED",
+    "result": "FAIL",
     "build": "1.0.0-b14",
     "comment_posted": false,
-    "notes": "Ticket status is To Do — fix not yet implemented. All existing Vantage destinations are Vantage Cloud type (api.cloud.telestream.net); no UNC path validation field found in submit dialog (Advanced mode) or destination configure flow. Needs local Vantage server destination or path-override configuration to exercise the /Volumes path input."
+    "notes": "Reproduced on b14. Settings > New Destination > Type=Vantage. Vantage Access Paths per source: set Movies MODE=NAS, entered /Volumes/Plex_NAS/Storage/Work/Ingest. Field accepted the macOS path with no validation error, no warning, no red border. Bug confirmed: /Volumes/ paths pass through silently. Note: UNC mode IS blocked on macOS (tooltip: 'Macintosh does not support UNC paths, use NAS instead') but NAS mode does not validate /Volumes/ paths. ING-258 status=To Do — fix not yet implemented."
   }
 ]

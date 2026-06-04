@@ -522,7 +522,7 @@
     "action": "tested",
     "result": "PASS",
     "build": "1.0.0-b14",
-    "comment_posted": false,
+    "comment_posted": true,
     "notes": "With single file selected from Season 6 (regular folder source), Copy Mode dropdown shows Preserve Structure available and not dimmed. Both Preserve Structure (Folder hierarchy will be preserved) and Flatten Structure (All files uploaded to root of destination) are selectable. Submit/Next button active (blue). Confirms the no-structure passthrough case: PS stays available rather than being dimmed for non-directory uploads."
   },
   {
@@ -533,7 +533,7 @@
     "action": "tested",
     "result": "PASS",
     "build": "1.0.0-b14",
-    "comment_posted": false,
+    "comment_posted": true,
     "notes": "Tested with real P2 card source (/Volumes/P2_Card, CONTENTS/CLIP structure, recognised as P2_CARD section in Sources panel). Selected A001C001.MXF. DOM: media header upload button class=opacity-1000 p-button p-component p-button-icon-only p-disabled p-button-rounded, opacity=1 — visually at FULL OPACITY (not dimmed). opacity-1000 class confirms fix is in place."
   },
   {
@@ -544,7 +544,7 @@
     "action": "tested",
     "result": "PASS",
     "build": "1.0.0-b14",
-    "comment_posted": false,
+    "comment_posted": true,
     "notes": "Tested with real P2 card source (/Volumes/P2_Card mounted dmg with CONTENTS/CLIP/A001C001.MXF). App detected card as P2_CARD. Selected A001C001.MXF, clicked submit → TestLocalDestination. Submit dialog: Copy Mode=Preserve Structure, Next button ACTIVE (blue). Media step: A001C001.MXF listed, Submit button ACTIVE. Card clip can be submitted with Preserve Structure on."
   },
   {
@@ -555,7 +555,7 @@
     "action": "tested",
     "result": "PASS",
     "build": "1.0.0-b14",
-    "comment_posted": false,
+    "comment_posted": true,
     "notes": "Settings > New Destination > Type=Vantage. Mode dropdown: UNC option is visually dimmed/disabled on macOS; hovering shows tooltip 'Macintosh does not support UNC paths, use NAS instead'. NAS mode is the correct alternative and is selectable; placeholder shows \\\\nas-server\\share\\folder. Fix confirmed: UNC mapping is clearly unavailable on macOS, users directed to NAS mode instead."
   }
 ]

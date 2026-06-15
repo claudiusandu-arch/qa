@@ -557,5 +557,16 @@
     "build": "1.0.0-b14",
     "comment_posted": true,
     "notes": "Settings > New Destination > Type=Vantage. Mode dropdown: UNC option is visually dimmed/disabled on macOS; hovering shows tooltip 'Macintosh does not support UNC paths, use NAS instead'. NAS mode is the correct alternative and is selectable; placeholder shows \\\\nas-server\\share\\folder. Fix confirmed: UNC mapping is clearly unavailable on macOS, users directed to NAS mode instead."
+  },
+  {
+    "date": "2026-06-15",
+    "key": "ING-279",
+    "url": "https://telestream.atlassian.net/browse/ING-279",
+    "summary": "[Frontend] embed fonts into app - offline mode means you can't fetch from google fonts",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.0-b16",
+    "comment_posted": true,
+    "notes": "Verified on macOS. 68 @font-face rules (22 inline base64 data-URIs, rest served from local /assets/*.woff2). Runtime network capture: zero requests to fonts.googleapis.com / fonts.gstatic.com or any external font CDN; all font/asset traffic local. No external @import. Caveat: offline behavior inferred from an online network capture + CSS inspection — a full network-dropped reload was not exercised. Ticket transitioned to Done."
   }
 ]

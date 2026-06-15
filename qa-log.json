@@ -568,5 +568,16 @@
     "build": "1.0.0-b16",
     "comment_posted": true,
     "notes": "Verified on macOS. 68 @font-face rules (22 inline base64 data-URIs, rest served from local /assets/*.woff2). Runtime network capture: zero requests to fonts.googleapis.com / fonts.gstatic.com or any external font CDN; all font/asset traffic local. No external @import. Caveat: offline behavior inferred from an online network capture + CSS inspection — a full network-dropped reload was not exercised. Ticket transitioned to Done."
+  },
+  {
+    "date": "2026-06-15",
+    "key": "ING-276",
+    "url": "https://telestream.atlassian.net/browse/ING-276",
+    "summary": "[Frontend] Extract help palette to app-components",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.0-b16",
+    "comment_posted": true,
+    "notes": "Verified on macOS. Help palette (now from app-components) opens, is context-aware (Sources help from Sources icon), search filters across categories with match highlighting (Tutorial/Destinations/Monitor/Media playback), article view renders markdown (bold, bullets, inline links), keyboard nav (up/down, enter, esc, cmd-k) functional. Transitioned to Done."
   }
 ]

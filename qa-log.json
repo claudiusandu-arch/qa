@@ -579,5 +579,16 @@
     "build": "1.0.0-b16",
     "comment_posted": true,
     "notes": "Verified on macOS. Help palette (now from app-components) opens, is context-aware (Sources help from Sources icon), search filters across categories with match highlighting (Tutorial/Destinations/Monitor/Media playback), article view renders markdown (bold, bullets, inline links), keyboard nav (up/down, enter, esc, cmd-k) functional. Transitioned to Done."
+  },
+  {
+    "date": "2026-06-15",
+    "key": "ING-277",
+    "url": "https://telestream.atlassian.net/browse/ING-277",
+    "summary": "[Frontend] Add drag area to help palette",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.0-b16",
+    "comment_posted": true,
+    "notes": "Verified on macOS. Drag handle present. Measured palette bounding rect before/after a drag — displacement matched cursor delta to the pixel (delta -266, +461 px); no positional jump. 'Offset from top while dragging' resolved: on drag start palette converts from centered (translateX -50%) to absolute left/top without a vertical offset. Palette functional after move. Transitioned to Done."
   }
 ]

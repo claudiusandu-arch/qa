@@ -601,5 +601,16 @@
     "build": "1.0.0-b16",
     "comment_posted": true,
     "notes": "Verified on macOS. No visual regression after web-components 2.0.1 / app-components 2.0.0 upgrade across Home, Inspector, Settings, Edit Destination, Vantage config modal, help palette, Monitor. Buttons, toggles, dropdowns, status badges, inputs, tables all styled correctly. No web-components/custom-element console errors. (Console showed a Secure Storage toast — confirmed a Chrome test-harness artifact, not an app bug: backend log shows auth healthy + zero secure-storage errors, native app shows no banner — and a NAS LiveQuery error for an unmounted /Volumes/Plex_NAS path, confirmed backend/environmental.) Transitioned to Done."
+  },
+  {
+    "date": "2026-06-15",
+    "key": "GAAS-1556",
+    "url": "https://telestream.atlassian.net/browse/GAAS-1556",
+    "summary": "[Frontend] Upgrade to web-components 2.0.1 (Review / Unified Platform)",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.0-b16",
+    "comment_posted": true,
+    "notes": "Review/Unified Platform tracker for the web-components 2.0.1 upgrade (mirrors ING-278/ING-150). QA checklist: (1) Submit-to-Vantage dialog renders cleanly at its new size (role=dialog 512x660), no clipping/overflow; (2) workflow search now integrated into the dropdown (editable combobox, type-to-filter, no separate search box — list empty in Chrome due to Electron-IPC artifact); (3) no visual regression across Home, Inspector, Settings, Edit Destination, Vantage config modal, help palette, Monitor. Verified on macOS. Transitioned to Done."
   }
 ]

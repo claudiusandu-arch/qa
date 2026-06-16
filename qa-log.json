@@ -623,5 +623,16 @@
     "build": "1.0.0-b16",
     "comment_posted": true,
     "notes": "Verified on macOS. FTP destinations now parse custom (non-default) ports. Tested end-to-end against a local FTP server on port 2121: all 3 endpoint forms from the report uploaded a real 237429-byte file successfully (STOR completed; jobs Completed in Monitor) with no 'nodename nor servname provided' error. 127.0.0.1:2121 -> IPv4; localhost:2121 -> resolved ::1 (IPv6); ftp://127.0.0.1:2121 -> scheme stripped, IPv4. NOTE: job submission cannot be driven via external Chrome (Submit needs the Electron IPC bridge absent in plain Chrome, same family as the secure-storage/workflow-dropdown artifacts) -- the 3 uploads were run by the user in the native app while Claude configured the destinations and verified via the FTP server log + Monitor. Transitioned to Done."
+  },
+  {
+    "date": "2026-06-16",
+    "key": "ING-135",
+    "url": "https://telestream.atlassian.net/browse/ING-135",
+    "summary": "[Frontend] Handle large set of workflows from vantage",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.0-b16",
+    "comment_posted": true,
+    "notes": "Vantage Workflow picker verified with a large workflow set (>15 workflows). #1 Show Inactive flag hides/reveals inactive workflows. #2 search box filters the dropdown. Favorites surfaces starred workflows (covers #3, regex-in-dest-config, which dev deferred). Features also code-confirmed in the b16 bundle (showInactiveWorkflows, dropdown filter-input, Favorites/toggleFavorite); listWorkflows data path proven via mock injector (25 workflows). Built a reusable native-renderer CDP automation harness (UP_Ingest_UI_Tests/scripts/ing-135-cdp.mjs) since the workflow list only populates with a Vantage connection that loads an endpoint (skip-gated query). Transitioned to Done."
   }
 ]

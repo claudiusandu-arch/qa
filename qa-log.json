@@ -634,5 +634,16 @@
     "build": "1.0.0-b16",
     "comment_posted": true,
     "notes": "Vantage Workflow picker verified with a large workflow set (>15 workflows). #1 Show Inactive flag hides/reveals inactive workflows. #2 search box filters the dropdown. Favorites surfaces starred workflows (covers #3, regex-in-dest-config, which dev deferred). Features also code-confirmed in the b16 bundle (showInactiveWorkflows, dropdown filter-input, Favorites/toggleFavorite); listWorkflows data path proven via mock injector (25 workflows). Built a reusable native-renderer CDP automation harness (UP_Ingest_UI_Tests/scripts/ing-135-cdp.mjs) since the workflow list only populates with a Vantage connection that loads an endpoint (skip-gated query). Transitioned to Done."
+  },
+  {
+    "date": "2026-06-16",
+    "key": "ING-150",
+    "url": "https://telestream.atlassian.net/browse/ING-150",
+    "summary": "[Frontend] Use TSEditableSelect instead of TSSelect to do searching in workflow list",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.0-b16",
+    "comment_posted": true,
+    "notes": "Component change verified directly: workflow selector is now an editable combobox (TSEditableSelect) — type directly into the dropdown to search, old separate search box gone. Confirmed in both the destination Configure modal and the Submit-to-Vantage dialog. Filter-against-a-populated-list is covered by ING-135 (same Vantage workflow picker), which validated type-to-filter via the mock injector (25 workflows) driven through the native renderer (CDP harness); in this session the list itself stayed empty because the listWorkflows($outputId) query is skip-gated without a connected Vantage account. Jira comment posted id 3508104. Transitioned to Done."
   }
 ]

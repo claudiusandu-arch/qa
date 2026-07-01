@@ -645,5 +645,27 @@
     "build": "1.0.0-b16",
     "comment_posted": true,
     "notes": "Component change verified directly: workflow selector is now an editable combobox (TSEditableSelect) — type directly into the dropdown to search, old separate search box gone. Confirmed in both the destination Configure modal and the Submit-to-Vantage dialog. Filter-against-a-populated-list is covered by ING-135 (same Vantage workflow picker), which validated type-to-filter via the mock injector (25 workflows) driven through the native renderer (CDP harness); in this session the list itself stayed empty because the listWorkflows($outputId) query is skip-gated without a connected Vantage account. Jira comment posted id 3508104. Transitioned to Done."
+  },
+  {
+    "date": "2026-07-01",
+    "key": "ING-293",
+    "url": "https://telestream.atlassian.net/browse/ING-293",
+    "summary": "[Frontend] Audio meters to use -70 floor and common even spacing",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.0-b18",
+    "comment_posted": true,
+    "notes": "macOS, Demonstration env. Audio meter scale floor -70 dBFS, even 10 dB spacing (0,-10,...,-70) with minor ticks. Calibration verified via generated 1kHz tone (measured peak -37.6/RMS -41.1 dBFS): L/R read ~-40 matching source. Timecode renders in Inter font (00:00:19:24 @25), clean alignment. Driven via native-renderer CDP harness. Jira comment id 3512403. Windows not tested (macOS deemed sufficient by QA)."
+  },
+  {
+    "date": "2026-07-01",
+    "key": "ING-146",
+    "url": "https://telestream.atlassian.net/browse/ING-146",
+    "summary": "[Frontend] BLOCKER - dev.up.telestream.com -> app.up.telestream.com",
+    "action": "tested",
+    "result": "DEFERRED",
+    "build": "1.0.0-b18",
+    "comment_posted": false,
+    "notes": "macOS partial. CONFIRMED: 4 distinct auth0 client IDs in config (dev/prod/staging/beta) - the b18 add-beta-client-id change present; env selector on Sign In screen offers Production/Beta/Demonstration. GAPS: no env selector in General settings (ticket wanted it at least there; General shows only Version+License); shift-click reveal of dev/staging unverified; login to all 4 envs untested (demo-only access, prod platform not ready). Findings comment drafted, awaiting approval to post."
   }
 ]

@@ -676,7 +676,7 @@
     "action": "tested",
     "result": "PASS",
     "build": "1.0.0-b20",
-    "comment_posted": false,
-    "notes": "macOS PASS. b19 baseline reproduced leak (auth.tokens.encrypted in zip config.json); b20 zip config.json contains only mainWindow, no auth node, token value absent from entire bundle. Live config auth untouched, app stays signed in. Bonus fix verified: backend-logs now included on macOS (path was ~/.local/share, now ~/Library/Application Support). Windows leg pending; comment held until then."
+    "comment_posted": true,
+    "notes": "macOS + Windows PASS. Zip config.json = mainWindow only, no auth node; token value absent from entire bundle on both platforms. Live config auth untouched, app stays signed in. Whitelist fix (CONFIG_SAFE_KEYS=[mainWindow]). Bonus: backend-logs now included on both platforms. Comment 3513407 posted; ticket moved to Done."
   }
 ]

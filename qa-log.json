@@ -709,7 +709,7 @@
     "action": "tested",
     "result": "PASS",
     "build": "1.0.0-b21",
-    "comment_posted": false,
-    "notes": "30-day drop-dead LIVE-CONFIRMED: set machine clock >30d past b21 build (to 2026-08-15), relaunched, main window showed 'Beta Expired' dialog ('This beta version of UP.Ingest has expired. Please download the latest version from the website.') with single Quit button. Code: nDe=30d, buildDateUtc vs now, Rn.quit() on dismiss; invalid build date fails safe. Demonstration signin mode present (code). Screenshot ING-302_beta-expired-clean. (License-expired grace dialog also stacked, expected under future clock.)"
+    "comment_posted": true,
+    "notes": "30-day drop-dead LIVE-CONFIRMED: set machine clock >30d past b21 build (to 2026-08-15), relaunched, main window showed 'Beta Expired' dialog ('This beta version of UP.Ingest has expired. Please download the latest version from the website.') with single Quit button. Code: nDe=30d, buildDateUtc vs now, Rn.quit() on dismiss; invalid build date fails safe. Demonstration signin mode present (code). Screenshot ING-302_beta-expired-clean. (License-expired grace dialog also stacked, expected under future clock.) Comment 3514308 posted; ticket moved to Done."
   }
 ]

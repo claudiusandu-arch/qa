@@ -3,7 +3,7 @@
     "date": "2026-04-17",
     "key": "ING-136",
     "url": "https://telestream.atlassian.net/browse/ING-136",
-    "summary": "S3/FTP credential masking \u2014 passwords never returned to frontend",
+    "summary": "S3/FTP credential masking — passwords never returned to frontend",
     "action": "tested",
     "result": "PASS",
     "build": "1.0.0",
@@ -13,7 +13,7 @@
     "date": "2026-04-17",
     "key": "ING-124",
     "url": "https://telestream.atlassian.net/browse/ING-124",
-    "summary": "SourceCard/MediaList performance \u2014 depth=0 optimization",
+    "summary": "SourceCard/MediaList performance — depth=0 optimization",
     "action": "tested",
     "result": "PASS",
     "build": "1.0.0",
@@ -27,13 +27,13 @@
     "action": "tested",
     "result": "PASS",
     "build": "1.0.0",
-    "notes": "Delete job \u2192 immediate disappearance from Monitor view; live subscription now triggered correctly"
+    "notes": "Delete job → immediate disappearance from Monitor view; live subscription now triggered correctly"
   },
   {
     "date": "2026-04-20",
     "key": "ING-135",
     "url": "https://telestream.atlassian.net/browse/ING-135",
-    "summary": "Vantage large workflow list \u2014 search + Show Inactive toggle",
+    "summary": "Vantage large workflow list — search + Show Inactive toggle",
     "action": "tested",
     "result": "DEFERRED",
     "build": "1.0.0",
@@ -83,7 +83,7 @@
     "date": "2026-04-17",
     "key": "ING-184",
     "url": "https://telestream.atlassian.net/browse/ING-184",
-    "summary": "FTP Server field placeholder has a typo \u2014 \"somwhere\" instead of \"somewhere\"",
+    "summary": "FTP Server field placeholder has a typo — \"somwhere\" instead of \"somewhere\"",
     "action": "created",
     "result": null,
     "build": "1.0.0",
@@ -128,7 +128,7 @@
     "result": "PASS",
     "build": "1.0.0-b2",
     "comment_posted": false,
-    "notes": "Occupied ports 4444 and 4445 before launch; app started on port 50480. Full UI loaded \u2014 Sources, Destinations, navigation functional. No error observed. macOS 26.4.1 (25E253)."
+    "notes": "Occupied ports 4444 and 4445 before launch; app started on port 50480. Full UI loaded — Sources, Destinations, navigation functional. No error observed. macOS 26.4.1 (25E253)."
   },
   {
     "date": "2026-04-20",
@@ -204,18 +204,18 @@
     "result": "PASS",
     "build": "1.0.475.b5",
     "comment_posted": true,
-    "notes": "Settings \u2192 Sources \u2192 New Source panel header renders \"Edit Source\" (translated). Row \"\u2026\" menu shows \"Edit Source\"/\"Delete Source\". No raw settings.sources.edit-source key observed."
+    "notes": "Settings → Sources → New Source panel header renders \"Edit Source\" (translated). Row \"…\" menu shows \"Edit Source\"/\"Delete Source\". No raw settings.sources.edit-source key observed."
   },
   {
     "date": "2026-04-24",
     "key": "ING-184",
     "url": "https://telestream.atlassian.net/browse/ING-184",
-    "summary": "FTP Server field placeholder has a typo \u2014 \"somwhere\" instead of \"somewhere\"",
+    "summary": "FTP Server field placeholder has a typo — \"somwhere\" instead of \"somewhere\"",
     "action": "tested",
     "result": "PASS",
     "build": "1.0.475.b5",
     "comment_posted": true,
-    "notes": "FTP placeholder verified via DOM = \"ftp.somewhere.com\". Cross-checked all 22 string changes in commit f1003049 against installed bundle \u2014 all old forms absent, all new forms present."
+    "notes": "FTP placeholder verified via DOM = \"ftp.somewhere.com\". Cross-checked all 22 string changes in commit f1003049 against installed bundle — all old forms absent, all new forms present."
   },
   {
     "date": "2026-04-24",
@@ -226,7 +226,7 @@
     "result": "PASS",
     "build": "1.0.475.b5",
     "comment_posted": true,
-    "notes": "Monitor view with expanded File Copy sub-row (Botez Amelia 14.05.2022.mp4); typed non-matching search string \u2014 all parent rows and the expanded sub-row correctly hidden, empty state shown."
+    "notes": "Monitor view with expanded File Copy sub-row (Botez Amelia 14.05.2022.mp4); typed non-matching search string — all parent rows and the expanded sub-row correctly hidden, empty state shown."
   },
   {
     "date": "2026-04-26",
@@ -237,7 +237,7 @@
     "result": "PASS",
     "build": "1.0.475.b5",
     "comment_posted": true,
-    "notes": "Toast confirmed via MutationObserver: 'Media cannot be played \u2014 may be unsupported media type'. p-toast-bottom-center element present in DOM on non-media file selection."
+    "notes": "Toast confirmed via MutationObserver: 'Media cannot be played — may be unsupported media type'. p-toast-bottom-center element present in DOM on non-media file selection."
   },
   {
     "date": "2026-04-26",
@@ -248,7 +248,7 @@
     "result": "PASS",
     "build": "1.0.475-b5",
     "platform": "Windows",
-    "notes": "Installed b5 (1.0.475) over b4 (1.0.461) \u2014 no duplicate Add/Remove entries, no Warning 1946"
+    "notes": "Installed b5 (1.0.475) over b4 (1.0.461) — no duplicate Add/Remove entries, no Warning 1946"
   },
   {
     "date": "2026-04-26",
@@ -259,7 +259,7 @@
     "result": "PASS",
     "build": "1.0.475.b5",
     "comment_posted": true,
-    "notes": "Selected MyStream_0.mov (timecode 00:00:00:00 @30), switched to TV source, selected ca.strings \u2014 timecode cleared to empty. Fix confirmed."
+    "notes": "Selected MyStream_0.mov (timecode 00:00:00:00 @30), switched to TV source, selected ca.strings — timecode cleared to empty. Fix confirmed."
   },
   {
     "date": "2026-04-27",
@@ -270,7 +270,7 @@
     "result": "PASS",
     "build": "1.0.475.b5",
     "comment_posted": true,
-    "notes": "Settings \u2192 Destinations: Cmd+K scoped to 8 destination articles. Editing FTP destination: Cmd+K opens directly to Edit: FTP article. Context routing confirmed at section and destination-type level."
+    "notes": "Settings → Destinations: Cmd+K scoped to 8 destination articles. Editing FTP destination: Cmd+K opens directly to Edit: FTP article. Context routing confirmed at section and destination-type level."
   },
   {
     "date": "2026-04-27",
@@ -281,7 +281,7 @@
     "result": "PASS",
     "build": "1.0.475.b5",
     "comment_posted": true,
-    "notes": "Scanned all 43 articles across 10 categories for raw markdown syntax (**,##,__,](,backtick). All clean \u2014 no raw syntax found in any article."
+    "notes": "Scanned all 43 articles across 10 categories for raw markdown syntax (**,##,__,](,backtick). All clean — no raw syntax found in any article."
   },
   {
     "date": "2026-04-27",
@@ -292,7 +292,7 @@
     "result": "PASS",
     "build": "1.0.475.b5",
     "comment_posted": true,
-    "notes": "Tested with Cloudflare VPN active. Login completed successfully \u2014 no connection failure or auth block observed."
+    "notes": "Tested with Cloudflare VPN active. Login completed successfully — no connection failure or auth block observed."
   },
   {
     "date": "2026-04-27",
@@ -303,7 +303,7 @@
     "result": "PASS",
     "build": "1.0.475.b5",
     "comment_posted": true,
-    "notes": "3 rapid move/resize \u2192 quit cycles. No TypeError: Object has been destroyed dialog in any cycle. App quit cleanly each time."
+    "notes": "3 rapid move/resize → quit cycles. No TypeError: Object has been destroyed dialog in any cycle. App quit cleanly each time."
   },
   {
     "date": "2026-04-30",
@@ -314,7 +314,7 @@
     "result": "PASS",
     "build": "1.0.494.b6",
     "comment_posted": true,
-    "notes": "About dialog shows \u00a9 2026 Telestream 2 LLC. Confirmed via Accessibility API and app.setAboutPanelOptions in app.asar bundle."
+    "notes": "About dialog shows © 2026 Telestream 2 LLC. Confirmed via Accessibility API and app.setAboutPanelOptions in app.asar bundle."
   },
   {
     "date": "2026-05-04",
@@ -430,7 +430,7 @@
     "date": "2026-05-05",
     "key": "ING-175",
     "url": "https://telestream.atlassian.net/browse/ING-175",
-    "summary": "Improve loading feedback for \u201cDiagnose Connection\u201d button in Destinations",
+    "summary": "Improve loading feedback for “Diagnose Connection” button in Destinations",
     "action": "tested",
     "result": "PASS",
     "build": "1.0.510.b7",
@@ -490,7 +490,7 @@
     "result": "DEFERRED",
     "build": "1.0.0-b13",
     "comment_posted": false,
-    "notes": "CML sidecar feature requires clips with distinct in/out segments. UI shortcut testing (I/O/P) produced only zero-duration clips (in=out). Backend CreateCmlSidecarUploadJob was not triggered \u2014 only media file copied, no .cml companion appeared. Test-setup limitation; deferred until clip mark creation can be verified with real in/out points."
+    "notes": "CML sidecar feature requires clips with distinct in/out segments. UI shortcut testing (I/O/P) produced only zero-duration clips (in=out). Backend CreateCmlSidecarUploadJob was not triggered — only media file copied, no .cml companion appeared. Test-setup limitation; deferred until clip mark creation can be verified with real in/out points."
   },
   {
     "date": "2026-06-02",
@@ -501,7 +501,7 @@
     "result": "PASS",
     "build": "1.0.0-b13",
     "comment_posted": true,
-    "notes": "Smoke-tested all 4 areas from commit 783cf6c: auth guard (existing session restored, no remount), video playback (loads and plays), panel splitter (layout stable), help palette keyboard nav (\u2191\u2193 highlight, Enter/Esc/breadcrumb all correct)."
+    "notes": "Smoke-tested all 4 areas from commit 783cf6c: auth guard (existing session restored, no remount), video playback (loads and plays), panel splitter (layout stable), help palette keyboard nav (↑↓ highlight, Enter/Esc/breadcrumb all correct)."
   },
   {
     "date": "2026-06-03",
@@ -534,7 +534,7 @@
     "result": "PASS",
     "build": "1.0.0-b14",
     "comment_posted": true,
-    "notes": "Tested with real P2 card source (/Volumes/P2_Card, CONTENTS/CLIP structure, recognised as P2_CARD section in Sources panel). Selected A001C001.MXF. DOM: media header upload button class=opacity-1000 p-button p-component p-button-icon-only p-disabled p-button-rounded, opacity=1 \u2014 visually at FULL OPACITY (not dimmed). opacity-1000 class confirms fix is in place."
+    "notes": "Tested with real P2 card source (/Volumes/P2_Card, CONTENTS/CLIP structure, recognised as P2_CARD section in Sources panel). Selected A001C001.MXF. DOM: media header upload button class=opacity-1000 p-button p-component p-button-icon-only p-disabled p-button-rounded, opacity=1 — visually at FULL OPACITY (not dimmed). opacity-1000 class confirms fix is in place."
   },
   {
     "date": "2026-06-03",
@@ -545,7 +545,7 @@
     "result": "PASS",
     "build": "1.0.0-b14",
     "comment_posted": true,
-    "notes": "Tested with real P2 card source (/Volumes/P2_Card mounted dmg with CONTENTS/CLIP/A001C001.MXF). App detected card as P2_CARD. Selected A001C001.MXF, clicked submit \u2192 TestLocalDestination. Submit dialog: Copy Mode=Preserve Structure, Next button ACTIVE (blue). Media step: A001C001.MXF listed, Submit button ACTIVE. Card clip can be submitted with Preserve Structure on."
+    "notes": "Tested with real P2 card source (/Volumes/P2_Card mounted dmg with CONTENTS/CLIP/A001C001.MXF). App detected card as P2_CARD. Selected A001C001.MXF, clicked submit → TestLocalDestination. Submit dialog: Copy Mode=Preserve Structure, Next button ACTIVE (blue). Media step: A001C001.MXF listed, Submit button ACTIVE. Card clip can be submitted with Preserve Structure on."
   },
   {
     "date": "2026-06-03",
@@ -567,7 +567,7 @@
     "result": "PASS",
     "build": "1.0.0-b16",
     "comment_posted": true,
-    "notes": "Verified on macOS. 68 @font-face rules (22 inline base64 data-URIs, rest served from local /assets/*.woff2). Runtime network capture: zero requests to fonts.googleapis.com / fonts.gstatic.com or any external font CDN; all font/asset traffic local. No external @import. Caveat: offline behavior inferred from an online network capture + CSS inspection \u2014 a full network-dropped reload was not exercised. Ticket transitioned to Done."
+    "notes": "Verified on macOS. 68 @font-face rules (22 inline base64 data-URIs, rest served from local /assets/*.woff2). Runtime network capture: zero requests to fonts.googleapis.com / fonts.gstatic.com or any external font CDN; all font/asset traffic local. No external @import. Caveat: offline behavior inferred from an online network capture + CSS inspection — a full network-dropped reload was not exercised. Ticket transitioned to Done."
   },
   {
     "date": "2026-06-15",
@@ -589,7 +589,7 @@
     "result": "PASS",
     "build": "1.0.0-b16",
     "comment_posted": true,
-    "notes": "Verified on macOS. Drag handle present. Measured palette bounding rect before/after a drag \u2014 displacement matched cursor delta to the pixel (delta -266, +461 px); no positional jump. 'Offset from top while dragging' resolved: on drag start palette converts from centered (translateX -50%) to absolute left/top without a vertical offset. Palette functional after move. Transitioned to Done."
+    "notes": "Verified on macOS. Drag handle present. Measured palette bounding rect before/after a drag — displacement matched cursor delta to the pixel (delta -266, +461 px); no positional jump. 'Offset from top while dragging' resolved: on drag start palette converts from centered (translateX -50%) to absolute left/top without a vertical offset. Palette functional after move. Transitioned to Done."
   },
   {
     "date": "2026-06-15",
@@ -600,7 +600,7 @@
     "result": "PASS",
     "build": "1.0.0-b16",
     "comment_posted": true,
-    "notes": "Verified on macOS. No visual regression after web-components 2.0.1 / app-components 2.0.0 upgrade across Home, Inspector, Settings, Edit Destination, Vantage config modal, help palette, Monitor. Buttons, toggles, dropdowns, status badges, inputs, tables all styled correctly. No web-components/custom-element console errors. (Console showed a Secure Storage toast \u2014 confirmed a Chrome test-harness artifact, not an app bug: backend log shows auth healthy + zero secure-storage errors, native app shows no banner \u2014 and a NAS LiveQuery error for an unmounted /Volumes/Plex_NAS path, confirmed backend/environmental.) Transitioned to Done."
+    "notes": "Verified on macOS. No visual regression after web-components 2.0.1 / app-components 2.0.0 upgrade across Home, Inspector, Settings, Edit Destination, Vantage config modal, help palette, Monitor. Buttons, toggles, dropdowns, status badges, inputs, tables all styled correctly. No web-components/custom-element console errors. (Console showed a Secure Storage toast — confirmed a Chrome test-harness artifact, not an app bug: backend log shows auth healthy + zero secure-storage errors, native app shows no banner — and a NAS LiveQuery error for an unmounted /Volumes/Plex_NAS path, confirmed backend/environmental.) Transitioned to Done."
   },
   {
     "date": "2026-06-15",
@@ -611,7 +611,7 @@
     "result": "PASS",
     "build": "1.0.0-b16",
     "comment_posted": true,
-    "notes": "Review/Unified Platform tracker for the web-components 2.0.1 upgrade (mirrors ING-278/ING-150). QA checklist: (1) Submit-to-Vantage dialog renders cleanly at its new size (role=dialog 512x660), no clipping/overflow; (2) workflow search now integrated into the dropdown (editable combobox, type-to-filter, no separate search box \u2014 list empty in Chrome due to Electron-IPC artifact); (3) no visual regression across Home, Inspector, Settings, Edit Destination, Vantage config modal, help palette, Monitor. Verified on macOS. Transitioned to Done."
+    "notes": "Review/Unified Platform tracker for the web-components 2.0.1 upgrade (mirrors ING-278/ING-150). QA checklist: (1) Submit-to-Vantage dialog renders cleanly at its new size (role=dialog 512x660), no clipping/overflow; (2) workflow search now integrated into the dropdown (editable combobox, type-to-filter, no separate search box — list empty in Chrome due to Electron-IPC artifact); (3) no visual regression across Home, Inspector, Settings, Edit Destination, Vantage config modal, help palette, Monitor. Verified on macOS. Transitioned to Done."
   },
   {
     "date": "2026-06-15",
@@ -644,7 +644,7 @@
     "result": "PASS",
     "build": "1.0.0-b16",
     "comment_posted": true,
-    "notes": "Component change verified directly: workflow selector is now an editable combobox (TSEditableSelect) \u2014 type directly into the dropdown to search, old separate search box gone. Confirmed in both the destination Configure modal and the Submit-to-Vantage dialog. Filter-against-a-populated-list is covered by ING-135 (same Vantage workflow picker), which validated type-to-filter via the mock injector (25 workflows) driven through the native renderer (CDP harness); in this session the list itself stayed empty because the listWorkflows($outputId) query is skip-gated without a connected Vantage account. Jira comment posted id 3508104. Transitioned to Done."
+    "notes": "Component change verified directly: workflow selector is now an editable combobox (TSEditableSelect) — type directly into the dropdown to search, old separate search box gone. Confirmed in both the destination Configure modal and the Submit-to-Vantage dialog. Filter-against-a-populated-list is covered by ING-135 (same Vantage workflow picker), which validated type-to-filter via the mock injector (25 workflows) driven through the native renderer (CDP harness); in this session the list itself stayed empty because the listWorkflows($outputId) query is skip-gated without a connected Vantage account. Jira comment posted id 3508104. Transitioned to Done."
   },
   {
     "date": "2026-07-01",
@@ -678,5 +678,38 @@
     "build": "1.0.0-b20",
     "comment_posted": true,
     "notes": "macOS + Windows PASS. Zip config.json = mainWindow only, no auth node; token value absent from entire bundle on both platforms. Live config auth untouched, app stays signed in. Whitelist fix (CONFIG_SAFE_KEYS=[mainWindow]). Bonus: backend-logs now included on both platforms. Comment 3513407 posted; ticket moved to Done."
+  },
+  {
+    "date": "2026-07-07",
+    "key": "ING-294",
+    "url": "https://telestream.atlassian.net/browse/ING-294",
+    "summary": "[Frontend] Upgrade electron to 43",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.0-b19 (ING-294 electron43 branch build, run 28847232935)",
+    "comment_posted": false,
+    "notes": "macOS only. Electron upgraded 38.8.6 -> 43.0.0 (bundled Electron Framework binary CFBundleVersion=43.0.0). Runtime /json/version UA: UP.Ingest/1.0.0 Chrome/150.0.7871.46 Electron/43.0.0, V8 15.0.245.13. App launches, codesign valid, backend GraphQL HTTP 200, renderer loaded /ingest/home with full Home view + real Sources data, no errors. Branch build; app version string still 1.0.0-b19 (not bumped). Windows not tested. No Jira comment posted (single-platform, awaiting approval)."
+  },
+  {
+    "date": "2026-07-10",
+    "key": "ING-299",
+    "url": "https://telestream.atlassian.net/browse/ING-299",
+    "summary": "[Frontend] Remove beta option from login popup",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.0-b21",
+    "comment_posted": false,
+    "notes": "macOS only. Verified via CDP native harness on running b21 (signin popup) + live frontend bundle. Env selector shows only Production; shift-click reveals full list Production/Staging/Development — NO Beta. Code: Sy env map = {production,staging,development}, no beta key. Beta removed from login popup. Screenshots: ING-299_env-dropdown-open, ING-299_env-shift-full-list. Windows not tested; no Jira comment posted (single-platform)."
+  },
+  {
+    "date": "2026-07-10",
+    "key": "ING-302",
+    "url": "https://telestream.atlassian.net/browse/ING-302",
+    "summary": "[Frontend] Put in temporary 30 day drop dead date on application",
+    "action": "tested",
+    "result": "PASS",
+    "build": "1.0.0-b21",
+    "comment_posted": false,
+    "notes": "macOS only. Verified via live frontend bundle code (index-DIdOT5rh.js) on running b21. 30-day kill-switch present: nDe=30 days; compares appState.buildDateUtc to now; if now-buildDate>30d shows 'Beta Expired' dialog ('This beta version of UP.Ingest has expired. Please download the latest version from the website.') with single Quit action then Rn.quit(); invalid/missing build date fails safe (quits). Demonstration sign-in ability present (button label 'Demonstration' when demo mode active). Time-gated dialog not live-triggered (needs clock change). Windows not tested; no Jira comment posted."
   }
 ]

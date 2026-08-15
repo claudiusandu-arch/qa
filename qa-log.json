@@ -710,6 +710,6 @@
     "result": "PASS",
     "build": "1.0.0-b21",
     "comment_posted": false,
-    "notes": "macOS only. Verified via live frontend bundle code (index-DIdOT5rh.js) on running b21. 30-day kill-switch present: nDe=30 days; compares appState.buildDateUtc to now; if now-buildDate>30d shows 'Beta Expired' dialog ('This beta version of UP.Ingest has expired. Please download the latest version from the website.') with single Quit action then Rn.quit(); invalid/missing build date fails safe (quits). Demonstration sign-in ability present (button label 'Demonstration' when demo mode active). Time-gated dialog not live-triggered (needs clock change). Windows not tested; no Jira comment posted."
+    "notes": "30-day drop-dead LIVE-CONFIRMED: set machine clock >30d past b21 build (to 2026-08-15), relaunched, main window showed 'Beta Expired' dialog ('This beta version of UP.Ingest has expired. Please download the latest version from the website.') with single Quit button. Code: nDe=30d, buildDateUtc vs now, Rn.quit() on dismiss; invalid build date fails safe. Demonstration signin mode present (code). Screenshot ING-302_beta-expired-clean. (License-expired grace dialog also stacked, expected under future clock.)"
   }
 ]
